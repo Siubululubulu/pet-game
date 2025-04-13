@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>電子情緒寵物</title>
     <style>
-        /* 可愛風格設計 */
+        /* 基礎樣式 */
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
@@ -42,28 +42,10 @@
             background-position: center;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: idle 2s infinite alternate;
-        }
-        
-        @keyframes idle {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
         }
 
-        .points {
-            font-size: 1.2rem;
+        .points, .level, #pet-status {
             margin: 10px 0;
-            color: #ff69b4;
-        }
-        
-        .level {
-            margin: 10px 0;
-            font-size: 1.2rem;
-            color: #ff4500;
         }
 
         button {
@@ -93,33 +75,6 @@
             font-size: 0.8rem;
             color: #999;
         }
-
-        /* 動物動畫效果 */
-        .pet.bounce {
-            animation: bounce 1s infinite;
-        }
-
-        .pet.spin {
-            animation: spin 1s infinite linear;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 <body>
@@ -127,20 +82,12 @@
     <div class="container">
         <h2>選擇你的寵物</h2>
         <div id="pet-selection">
-            <button onclick="selectPet('bird', '小鳥')">小鳥</button>
-            <button onclick="selectPet('cat', '貓咪')">貓咪</button>
-            <button onclick="selectPet('dog', '狗狗')">狗狗</button>
+            <button onclick="selectPet('bird')">小鳥</button>
+            <button onclick="selectPet('cat')">小貓</button>
+            <button onclick="selectPet('dog')">小狗</button>
         </div>
         <div id="pet-container" style="display: none;">
-            <div id="pet" class="pet">
-                <!-- 預設是小鳥，稍後會換成其他寵物 -->
-                <svg id="pet-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="40" fill="#FFD700" />
-                    <circle cx="35" cy="40" r="5" fill="#000" />
-                    <circle cx="65" cy="40" r="5" fill="#000" />
-                    <path d="M40 60 Q50 70 60 60" stroke="#000" stroke-width="2" fill="none" />
-                </svg>
-            </div>
+            <div id="pet" class="pet"></div>
             <p class="points">工作坊點數：<span id="points">100</span>/100</p>
             <p class="level">寵物等級：<span id="level">1</span></p>
             <p id="pet-status">寵物狀態：靜止</p>
@@ -149,6 +96,7 @@
                 <button onclick="interact('feed')">餵食 🍎</button>
                 <button onclick="interact('play')">跳舞 🎵</button>
                 <button onclick="interact('spin')">旋轉 🌀</button>
+                <button onclick="interact('sleep')">睡覺 😴</button>
             </div>
         </div>
     </div>
@@ -159,30 +107,30 @@
         let points = 100;
         let level = 1;
 
-        function selectPet(pet, name) {
-            selectedPet = pet;
-            const petSvg = document.getElementById('pet-svg');
+        function selectPet(pet) {
+            const petDiv = document.getElementById('pet');
             if (pet === 'bird') {
-                petSvg.innerHTML = '<circle cx="50" cy="50" r="40" fill="#FFD700" /><circle cx="35" cy="40" r="5" fill="#000" /><circle cx="65" cy="40" r="5" fill="#000" /><path d="M40 60 Q50 70 60 60" stroke="#000" stroke-width="2" fill="none" />';
+                petDiv.style.backgroundImage = "url('https://via.placeholder.com/150/FFD700/FFFFFF?text=Bird')";
             } else if (pet === 'cat') {
-                petSvg.innerHTML = '<circle cx="50" cy="50" r="40" fill="#FFB6C1" /><circle cx="35" cy="40" r="5" fill="#000" /><circle cx="65" cy="40" r="5" fill="#000" /><path d="M30 60 Q50 80 70 60" stroke="#000" stroke-width="2" fill="none" />';
+                petDiv.style.backgroundImage = "url('YOUR_CAT_IMAGE_URL')"; // 替換為你的貓圖片 URL
             } else if (pet === 'dog') {
-                petSvg.innerHTML = '<circle cx="50" cy="50" r="40" fill="#A0522D" /><circle cx="35" cy="40" r="5" fill="#000" /><circle cx="65" cy="40" r="5" fill="#000" /><path d="M40 60 Q50 65 60 60" stroke="#000" stroke-width="2" fill="none" />';
+                petDiv.style.backgroundImage = "url('YOUR_DOG_IMAGE_URL')"; // 替換為你的狗圖片 URL
             }
             document.getElementById('pet-selection').style.display = 'none';
             document.getElementById('pet-container').style.display = 'block';
         }
 
         function interact(action) {
-            const pet = document.getElementById('pet');
+            const status = document.getElementById('pet-status');
             if (action === 'feed') {
-                pet.classList.add('bounce');
+                status.textContent = '寵物正在吃東西！ 🍎';
+            } else if (action === 'play') {
+                status.textContent = '寵物在跳舞！ 🎵';
             } else if (action === 'spin') {
-                pet.classList.add('spin');
+                status.textContent = '寵物正在旋轉！ 🌀';
+            } else if (action === 'sleep') {
+                status.textContent = '寵物在睡覺！ 😴';
             }
-            setTimeout(() => {
-                pet.classList.remove('bounce', 'spin');
-            }, 1000);
         }
     </script>
 </body>
