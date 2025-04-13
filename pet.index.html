@@ -42,10 +42,33 @@
             background-position: center;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .points, .level, #pet-status {
-            margin: 10px 0;
+        .pet.bounce {
+            animation: bounce 1s infinite;
+        }
+
+        .pet.spin {
+            animation: spin 1s 1;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         button {
@@ -112,25 +135,34 @@
             if (pet === 'bird') {
                 petDiv.style.backgroundImage = "url('https://via.placeholder.com/150/FFD700/FFFFFF?text=Bird')";
             } else if (pet === 'cat') {
-                petDiv.style.backgroundImage = "url('YOUR_CAT_IMAGE_URL')"; // 替換為你的貓圖片 URL
+                petDiv.style.backgroundImage = "url('https://example.com/cat.png')"; // 替換為實際的貓圖片 URL
             } else if (pet === 'dog') {
-                petDiv.style.backgroundImage = "url('YOUR_DOG_IMAGE_URL')"; // 替換為你的狗圖片 URL
+                petDiv.style.backgroundImage = "url('https://example.com/dog.png')"; // 替換為實際的狗圖片 URL
             }
             document.getElementById('pet-selection').style.display = 'none';
             document.getElementById('pet-container').style.display = 'block';
         }
 
         function interact(action) {
+            const pet = document.getElementById('pet');
             const status = document.getElementById('pet-status');
             if (action === 'feed') {
                 status.textContent = '寵物正在吃東西！ 🍎';
+                pet.classList.add('bounce');
             } else if (action === 'play') {
                 status.textContent = '寵物在跳舞！ 🎵';
+                pet.classList.add('bounce');
             } else if (action === 'spin') {
                 status.textContent = '寵物正在旋轉！ 🌀';
+                pet.classList.add('spin');
             } else if (action === 'sleep') {
                 status.textContent = '寵物在睡覺！ 😴';
+                pet.style.opacity = 0.5;
             }
+            setTimeout(() => {
+                pet.classList.remove('bounce', 'spin');
+                pet.style.opacity = 1;
+            }, 1000);
         }
     </script>
 </body>
