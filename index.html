@@ -1,261 +1,173 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang HK'}
-    span.s1 {font: 12.0px 'PingFang HK'}
-    span.s2 {font: 12.0px Helvetica}
-    span.s3 {font: 12.0px 'Apple Color Emoji'}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超級可愛電子情緒寵物</title>
+    <style>
+        /* 可愛風格設計 */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffebf0, #fff5f8);
+            color: #333;
+        }
+        
+        header {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 20px 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border: 3px solid #ffb6c1;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pet {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .points {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #ff69b4;
+        }
+        
+        .level {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #ff4500;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ff85c1;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;<span class="s1">超級可愛電子情緒寵物</span>&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* <span class="s1">可愛風格設計</span> */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Comic Sans MS', cursive, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(to bottom, #ffebf0, #fff5f8);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ffb6c1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 30px auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 3px solid #ffb6c1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pet {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 150px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 150px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 20px auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-size: cover;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-position: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pet.bounce {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>animation: bounce 1s infinite;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pet.jump {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>animation: jump 1s infinite alternate;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pet.spin {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>animation: spin 1s infinite linear;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.pet.zoom {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>animation: zoom 0.5s infinite alternate;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@keyframes bounce {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>0%, 100% { transform: translateY(0); }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>50% { transform: translateY(-15px); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@keyframes jump {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: translateY(0); }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: translateY(-30px); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@keyframes spin {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: rotate(0); }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: rotate(360deg); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>@keyframes zoom {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: scale(1); }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: scale(1.2); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.points {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ff69b4;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.level {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #ff4500;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ff69b4;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s, transform 0.2s;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ff85c1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1.05);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button:active {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(0.95);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #999;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span>超級可愛電子情緒寵物</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;<span class="s1">選擇你的寵物</span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="pet-selection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="selectPet('bird', '<span class="s1">小鳥</span>', 'https://via.placeholder.com/150/FF69B4/FFFFFF?text=Bird')"&gt;<span class="s1">小鳥</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="selectPet('cat', '<span class="s1">貓咪</span>', 'https://via.placeholder.com/150/FFB6C1/FFFFFF?text=Cat')"&gt;<span class="s1">貓咪</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="selectPet('dog', '<span class="s1">狗狗</span>', 'https://via.placeholder.com/150/FFD700/FFFFFF?text=Dog')"&gt;<span class="s1">狗狗</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="pet-container" style="display: none;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="pet" class="pet" style="background-image: url('https://via.placeholder.com/150');"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="points"&gt;<span class="s1">工作坊點數：</span>&lt;span id="points"&gt;100&lt;/span&gt;/100&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="level"&gt;<span class="s1">寵物等級：</span>&lt;span id="level"&gt;1&lt;/span&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="pet-status"&gt;<span class="s1">寵物狀態：靜止</span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h3&gt;<span class="s1">與寵物互動</span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="interact('feed')"&gt;<span class="s1">餵食</span> <span class="s3">🍎</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="interact('play')"&gt;<span class="s1">跳舞</span> <span class="s3">🎵</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="interact('hug')"&gt;<span class="s1">擁抱</span> <span class="s3">🤗</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button onclick="interact('spin')"&gt;<span class="s1">旋轉</span> <span class="s3">🌀</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2025 <span class="s1">超級可愛電子情緒寵物</span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio id="sound-feed" src="https://www.soundjay.com/button/beep-07.mp3"&gt;&lt;/audio&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio id="sound-play" src="https://www.soundjay.com/button/beep-06.mp3"&gt;&lt;/audio&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio id="sound-hug" src="https://www.soundjay.com/button/beep-05.mp3"&gt;&lt;/audio&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;audio id="sound-spin" src="https://www.soundjay.com/button/beep-04.mp3"&gt;&lt;/audio&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let selectedPet = null;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let points = 100;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let level = 1;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let exp = 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const expPerLevel = 50;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function selectPet(pet, name, image) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (selectedPet) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert('<span class="s1">你已經選擇了一隻寵物，無法更改！</span>');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>selectedPet = pet;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('pet').style.backgroundImage = `url(${image})`;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('pet-selection').style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('pet-container').style.display = 'block';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function interact(action) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (points &lt; 10) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert('<span class="s1">點數不足！請等待恢復。</span>');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>points -= 10;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>exp += 10;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (exp &gt;= expPerLevel) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>level++;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>exp = 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('level').textContent = level;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert(`<span class="s1">恭喜！你的寵物升到了等級</span> ${level}<span class="s1">！</span>`);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('points').textContent = points;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>const pet = document.getElementById('pet');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const status = document.getElementById('pet-status');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pet.className = 'pet';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (action === 'feed') {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pet.classList.add('bounce');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = '<span class="s1">寵物正在吃東西！</span> <span class="s3">🍎</span>';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>playSound('sound-feed');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else if (action === 'play') {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pet.classList.add('jump');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = '<span class="s1">寵物在跳舞！</span> <span class="s3">🎵</span>';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>playSound('sound-play');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else if (action === 'hug') {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pet.classList.add('zoom');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = '<span class="s1">你擁抱了你的寵物！</span> <span class="s3">🤗</span>';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>playSound('sound-hug');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>} else if (action === 'spin') {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pet.classList.add('spin');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = '<span class="s1">寵物正在旋轉！</span> <span class="s3">🌀</span>';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>playSound('sound-spin');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>pet.className = 'pet';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = '<span class="s1">靜止</span>';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}, 2000);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function playSound(id) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const sound = document.getElementById(id);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>sound.currentTime = 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>sound.play();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>setInterval(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>if (points &lt; 100) {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>points += 20;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (points &gt; 100) points = 100;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('points').textContent = points;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, 30 * 60 * 1000);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <header>超級可愛電子情緒寵物</header>
+    <div class="container">
+        <h2>選擇你的寵物</h2>
+        <div id="pet-selection">
+            <button onclick="selectPet('bird', '小鳥', 'https://via.placeholder.com/150/FF69B4/FFFFFF?text=Bird')">小鳥</button>
+            <button onclick="selectPet('cat', '貓咪', 'https://via.placeholder.com/150/FFB6C1/FFFFFF?text=Cat')">貓咪</button>
+            <button onclick="selectPet('dog', '狗狗', 'https://via.placeholder.com/150/FFD700/FFFFFF?text=Dog')">狗狗</button>
+        </div>
+        <div id="pet-container" style="display: none;">
+            <div id="pet" class="pet" style="background-image: url('https://via.placeholder.com/150');"></div>
+            <p class="points">工作坊點數：<span id="points">100</span>/100</p>
+            <p class="level">寵物等級：<span id="level">1</span></p>
+            <p id="pet-status">寵物狀態：靜止</p>
+            <h3>與寵物互動</h3>
+            <div>
+                <button onclick="interact('feed')">餵食 🍎</button>
+                <button onclick="interact('play')">跳舞 🎵</button>
+                <button onclick="interact('hug')">擁抱 🤗</button>
+                <button onclick="interact('spin')">旋轉 🌀</button>
+            </div>
+        </div>
+    </div>
+    <footer>© 2025 超級可愛電子情緒寵物</footer>
+
+    <script>
+        let selectedPet = null;
+        let points = 100;
+        let level = 1;
+        let exp = 0;
+        const expPerLevel = 50;
+
+        function selectPet(pet, name, image) {
+            if (selectedPet) {
+                alert('你已經選擇了一隻寵物，無法更改！');
+                return;
+            }
+            selectedPet = pet;
+            document.getElementById('pet').style.backgroundImage = `url(${image})`;
+            document.getElementById('pet-selection').style.display = 'none';
+            document.getElementById('pet-container').style.display = 'block';
+        }
+
+        function interact(action) {
+            if (points < 10) {
+                alert('點數不足！請等待恢復。');
+                return;
+            }
+            points -= 10;
+            exp += 10;
+
+            if (exp >= expPerLevel) {
+                level++;
+                exp = 0;
+                document.getElementById('level').textContent = level;
+                alert(`恭喜！你的寵物升到了等級 ${level}！`);
+            }
+            document.getElementById('points').textContent = points;
+
+            const pet = document.getElementById('pet');
+            const status = document.getElementById('pet-status');
+            pet.className = 'pet';
+
+            if (action === 'feed') {
+                pet.classList.add('bounce');
+                status.textContent = '寵物正在吃東西！ 🍎';
+            } else if (action === 'play') {
+                pet.classList.add('jump');
+                status.textContent = '寵物在跳舞！ 🎵';
+            } else if (action === 'hug') {
+                pet.classList.add('zoom');
+                status.textContent = '你擁抱了你的寵物！ 🤗';
+            } else if (action === 'spin') {
+                pet.classList.add('spin');
+                status.textContent = '寵物正在旋轉！ 🌀';
+            }
+
+            setTimeout(() => {
+                pet.className = 'pet';
+                status.textContent = '靜止';
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
